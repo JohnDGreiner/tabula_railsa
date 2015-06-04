@@ -15,7 +15,9 @@
       <%= check_box_tag :chocolate %> Chocolate<br>
       <%= check_box_tag :rainbows %> Rainbows<br>
       <%= check_box_tag :puppies %> Puppies<br>
-      <%= check_box_tag :cold_hard_cash %> Cold Hard Cash<br>
+      <% if Rails.env == "development" %>
+        <%= check_box_tag :cold_hard_cash %> Cold Hard Cash<br>
+      <% end %>
     </div>
     <%= submit_tag %>
   <% end %>
