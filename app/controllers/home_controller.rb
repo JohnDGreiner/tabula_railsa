@@ -2,13 +2,8 @@ class HomeController < ApplicationController
 
   def form
 
-    @survey = Survey.new
+    @survey = Survey.create!(name: params[:name], chocolate: params[:chocolate], rainbows: params[:rainbows], puppies: params[:puppies], cash: params[:cash],)
 
-    respond_to do |format|
-      if @survey.save
-        format.html { redirect_to ty }
-      end
-    end
   end
 
 end
