@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  chocolate: false
+  rainbows: false
+  puppies: false
+  cash: false
+
+two:
+  name: MyString
+  chocolate: false
+  rainbows: false
+  puppies: false
+  cash: false
