@@ -1,11 +1,5 @@
-<% if params[:name] %>
-  Thanks for submitting the form!  Here are your answers:<br>
-  Name: <%= @survey.name %><br>
-  Chocolate? <%= @survey.chocolate ? "Yes!" : "No" %><br>
-  Rainbows? <%= @survey.rainbows ? "Yes!" : "No" %><br>
-  Puppies? <%= @survey.puppies ? "Yes!" : "No" %><br>
-  Cold Hard Cash? <%= @survey.cash ? "Yes!" : "No" %><br>
-<% else %>
+
+
   <%= form_tag home_form_path do %>
     <div>
       Name: <%= text_field_tag :name %>
@@ -21,4 +15,3 @@
     </div>
     <%= submit_tag %>
   <% end %>
-<% end %>
