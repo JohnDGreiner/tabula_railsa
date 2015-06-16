@@ -6,12 +6,13 @@
     </div>
     <div>
       Favorites:<br>
-      <%= check_box_tag :chocolate %> Chocolate<br>
-      <%= check_box_tag :rainbows %> Rainbows<br>
-      <%= check_box_tag :puppies %> Puppies<br>
-      <% if Rails.env == "development" %>
-        <%= check_box_tag :cold_hard_cash %> Cold Hard Cash<br>
+      <% checks{chocolate => "Chocolate", rainbow => "Rainbows", puppies => "Puppies", cash => "Cold Hard Cash" } %>
+
+      <% checks.each do |k,v| %>
+        <%= f.check_box :k %><%= #{v} %><br>
       <% end %>
+
+
     </div>
     <%= submit_tag %>
   <% end %>
